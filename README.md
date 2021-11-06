@@ -23,6 +23,9 @@ Inspired by cmatrix.
 - CTRL+Q to quit the program
 - CTRL+C is allowed
 
+## Dependencies
+- ncurses
+
 ## Make
 Use `make all` to see all the make targets.
 
