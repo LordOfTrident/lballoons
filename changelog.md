@@ -9,3 +9,4 @@ All the versions and the changes they bring
 - `1.1.2`: Working getch
 - `1.2.0`: Resizable screen
 - `1.2.1`: README.md fixes
+- `1.2.2`: Screenshot in README.md + new thumbnail

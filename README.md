@@ -13,6 +13,7 @@
 		<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/LordOfTrident/lballoons?color=0088ff"/>
 	</a>
 	<br><br><br>
+	<img width="500px" src="assets/img.png"/>
 </p>
 
 I made this purely to practice C since i have written almost no programs in it.
