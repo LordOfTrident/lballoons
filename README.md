@@ -7,10 +7,10 @@
 		<img alt="License" src="https://img.shields.io/badge/license-GPL-blue?color=7aca00"/>
 	</a>
 	<a href="https://github.com/LordOfTrident/lballoons/issues">
-		<img alt="Issues" src="https://img.shields.io/github/issues/LordOfTrident/balloons?color=0088ff"/>
+		<img alt="Issues" src="https://img.shields.io/github/issues/LordOfTrident/lballoons?color=0088ff"/>
 	</a>
-	<a href="https://github.com/LordOfTrident/balloons/pulls">
-		<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/LordOfTrident/balloons?color=0088ff"/>
+	<a href="https://github.com/LordOfTrident/lballoons/pulls">
+		<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/LordOfTrident/lballoons?color=0088ff"/>
 	</a>
 	<br><br><br>
 </p>
