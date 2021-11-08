@@ -15,7 +15,7 @@
 
 #define LB_VERSION_MAJOR 1
 #define LB_VERSION_MINOR 2
-#define LB_VERSION_PATCH 2
+#define LB_VERSION_PATCH 3
 
                      //lballoons
                 int usleep(unsigned u);

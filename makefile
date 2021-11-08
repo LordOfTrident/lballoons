@@ -21,7 +21,7 @@ compile: src/main.c
 clean:
 	@echo Cleaning...
 	@rm ./bin/app
-	@echo Cleaned succesfully...
+	@echo Cleaned succesfully
 
 all:
 	@echo compile - Compiles the source

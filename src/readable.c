@@ -15,7 +15,7 @@
 
 #define LB_VERSION_MAJOR 1
 #define LB_VERSION_MINOR 2
-#define LB_VERSION_PATCH 2
+#define LB_VERSION_PATCH 3
 
 int usleep(unsigned p_uSeconds);
 
@@ -91,7 +91,7 @@ void balloon_Draw(const Balloon *p_balloon) {
 	};
 };
 
-void ballons_SetDefaults() {
+void ballons_SetDefaults(void) {
 	int x = 0, y = 0;
 	for (int i = 0; i < balloons_Size1D; ++ i) {
 		balloons[i].x = x * 6 + rand() % 4; // Offset the balloon position
@@ -106,13 +106,13 @@ void ballons_SetDefaults() {
 	};
 };
 
-void balloons_Init() {
+void balloons_Init(void) {
 	balloons = (Balloon*)malloc(sizeof(Balloon) * balloons_Size1D);
 
 	ballons_SetDefaults();
 };
 
-void screen_Init() {
+void screen_Init(void) {
 	screen = (Pixel*)malloc(sizeof(Pixel) * screen_Size1D);
 
 	for (int i = 0; i < screen_Size1D; ++ i) {
@@ -121,7 +121,7 @@ void screen_Init() {
 	};
 };
 
-void balloons_Refresh() {
+void balloons_Refresh(void) {
 	// I had alot of pain when using 2D arrays
 	// and realloc, so it led to me switching
 	// to 1D arrays which also turned out to
@@ -141,7 +141,7 @@ void balloons_Refresh() {
 	};
 };
 
-void screen_Refresh() {
+void screen_Refresh(void) {
 	void *temp = realloc(
 		screen,
 		sizeof(Pixel) * screen_Size1D
@@ -166,7 +166,7 @@ void screen_Refresh() {
 	};
 };
 
-void screen_SetSize() {
+void screen_SetSize(void) {
 	screen_SizeX = getmaxx(stdscr);
 	screen_SizeY = getmaxy(stdscr);
 
@@ -174,7 +174,7 @@ void screen_SetSize() {
 	screen_Size1D = screen_SizeX * screen_SizeY;
 };
 
-void balloons_SetSize() {
+void balloons_SetSize(void) {
 	balloons_SizeX = screen_SizeX / 6;
 	int balloons_TempSizeY = screen_SizeY / 7;
 	balloons_SizeY = balloons_TempSizeY + 2;
@@ -183,7 +183,7 @@ void balloons_SetSize() {
 	balloons_Size1D = balloons_SizeY * (balloons_SizeX + 1);
 };
 
-void Init() {
+void Init(void) {
 	initscr();
 
 	noecho();
@@ -211,14 +211,14 @@ void Init() {
 	balloons_Init();
 };
 
-void Finish() {
+void Finish(void) {
 	free(balloons);
 	free(screen);
 
 	endwin();
 };
 
-void Render() {
+void Render(void) {
 	move(0, 0);
 	for (int i = 0; i < screen_Size1D; ++ i) {
 		attron(COLOR_PAIR(screen[i].color));
@@ -232,7 +232,7 @@ void Render() {
 	refresh();
 };
 
-void Events() {
+void Events(void) {
 	int in = wgetch(stdscr);
 	switch (in) {
 	case KEY_RESIZE:
@@ -251,7 +251,7 @@ void Events() {
 	};
 };
 
-void MainLoop() {
+void MainLoop(void) {
 	running = true;
 	while (running) {
 		int x = 0;
