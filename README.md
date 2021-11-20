@@ -20,9 +20,9 @@ I made this purely to practice C since i have written almost no programs in it.
 Inspired by [cmatrix](https://github.com/abishekvashok/cmatrix).
 
 ## Controls
-| Key combination | Description      |
-|-----------------|------------------|
-| CTRL+Q/CTRL+C   | Quit the program |
+| Key           | Description      |
+|---------------|------------------|
+| CTRL+Q/CTRL+C | Quit the program |
 
 ## Dependencies
 - ncurses
