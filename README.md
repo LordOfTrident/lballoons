@@ -17,11 +17,12 @@
 </p>
 
 I made this purely to practice C since i have written almost no programs in it.
-Inspired by cmatrix.
+Inspired by [cmatrix](https://github.com/abishekvashok/cmatrix).
 
 ## Controls
-- CTRL+Q to quit the program
-- CTRL+C is allowed
+| Key combination | Description      |
+|-----------------|------------------|
+| CTRL+Q/CTRL+C   | Quit the program |
 
 ## Dependencies
 - ncurses
