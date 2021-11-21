@@ -1,6 +1,6 @@
 /*
  *  lballoons - A terminal "screensaver" written in C
- *  Version 1.2.2
+ *  Version 1.2.4
  *  Github: https://github.com/LordOfTrident/lballoons
  *
  *  This is the formatted source code NOT used by the
@@ -15,7 +15,7 @@
 
 #define LB_VERSION_MAJOR 1
 #define LB_VERSION_MINOR 2
-#define LB_VERSION_PATCH 3
+#define LB_VERSION_PATCH 4
 
 int usleep(unsigned p_uSeconds);
 

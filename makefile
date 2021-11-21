@@ -7,8 +7,7 @@ C_FLAGS = \
 	-I./src\
 	-I./\
 	-o ./bin/app\
-	-lncurses\
-	-g
+	-lncurses
 
 compile: src/main.c
 	@mkdir -p ./bin
