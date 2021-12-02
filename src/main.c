@@ -1,6 +1,6 @@
 /*
  *  lballoons - A terminal "screensaver" written in C
- *  Version 1.2.4
+ *  Version 1.2.5
  *  Github: https://github.com/LordOfTrident/lballoons
  *
  *  This is the "art" source code and the one used
@@ -15,7 +15,7 @@
 
 #define LB_VERSION_MAJOR 1
 #define LB_VERSION_MINOR 2
-#define LB_VERSION_PATCH 4
+#define LB_VERSION_PATCH 5
 
                      //lballoons
                 int usleep(unsigned u);
@@ -32,16 +32,16 @@ void u(){r=(p*)malloc(sizeof(p)*l);for(int i=0;i<l;++i
 6;m=getmaxy(stdscr);d=m/7;f=d+2;e=7*(d+1);s=f*(c+1);g=
 l;l=a*m;}int main(void){initscr();noecho();start_color
 ();use_default_colors();curs_set(0);timeout(0);raw();\
-cbreak();init_pair(1,7,0);init_pair(2,4,0);init_pair(3
-,1,0);init_pair(4,2,0);init_pair(5,3,0);init_pair(6,6,
- 0);init_pair(7,5,0);v();t();u();char z=1;while(z){//
- int x=0;for(int i=0;i<s;++i){--o[i].y;if(o[i].y<-6){
-  o[i].x=x*6+rand()%4;o[i].y=e;o[i].c=rand()%7+1;}b*
-   _=&o[i];for(int i=0;i<6;++i){if((_->y+i)<0||(_->
-    y+i)>=m)continue;for(int j=0;br[i][j]!=0&&j<4\
-     ;++j){int p=of[i]+j;if((_->x+p)>=a||(_->x+p)
-      <0)break;int pos=(_->y+i)*a+_->x+p;r[pos]\
-        .h=br[i][j];if(i<3)r[pos].c=_->c;}}if(
+cbreak();init_pair(1,7,-1);init_pair(2,4,-1);init_pair
+(3,1,-1);init_pair(4,2,-1);init_pair(5,3,-1);init_pair
+ (6,6,-1);init_pair(7,5,-1);v();t();u();int z=1;while(
+ z){int x=0;for(int i=0;i<s;++i){--o[i].y;if(o[i].y<-
+  6){o[i].x=x*6+rand()%4;o[i].y=e;o[i].c=rand()%7+1;
+   }b*_=&o[i];for(int i=0;i<6;++i){if((_->y+i)<0||(
+    _->y+i)>=m)continue;for(int j=0;br[i][j]!=0&&j
+     <4;++j){int p=of[i]+j;if((_->x+p)>=a||(_->x+
+      p)<0)break;int pos=(_->y+i)*a+_->x+p;r[pos
+        ].h=br[i][j];if(i<3)r[pos].c=_->c;}}if(
           x>=c)x=0;else++x;}move(0,0);for(int
             i=0;i<l;++i){attron(COLOR_PAIR(
              r[i].c));addch(r[i].h);attroff

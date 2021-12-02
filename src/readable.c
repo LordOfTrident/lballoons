@@ -1,6 +1,6 @@
 /*
  *  lballoons - A terminal "screensaver" written in C
- *  Version 1.2.4
+ *  Version 1.2.5
  *  Github: https://github.com/LordOfTrident/lballoons
  *
  *  This is the formatted source code NOT used by the
@@ -15,9 +15,11 @@
 
 #define LB_VERSION_MAJOR 1
 #define LB_VERSION_MINOR 2
-#define LB_VERSION_PATCH 4
+#define LB_VERSION_PATCH 5
 
-int usleep(unsigned p_uSeconds);
+#define COLOR_BACKGROUND -1
+
+int usleep(unsigned u);
 
 typedef struct {
 	int x, y;
@@ -196,13 +198,13 @@ void Init(void) {
 	cbreak(); // CTRL+C will exit the program, but
 	          // the coded-in way is CTRL+Q
 
-	init_pair(1, COLOR_WHITE,   COLOR_BLACK);
-	init_pair(2, COLOR_BLUE,    COLOR_BLACK);
-	init_pair(3, COLOR_RED,     COLOR_BLACK);
-	init_pair(4, COLOR_GREEN,   COLOR_BLACK);
-	init_pair(5, COLOR_YELLOW,  COLOR_BLACK);
-	init_pair(6, COLOR_CYAN,    COLOR_BLACK);
-	init_pair(7, COLOR_MAGENTA, COLOR_BLACK);
+	init_pair(1, COLOR_WHITE,   COLOR_BACKGROUND);
+	init_pair(2, COLOR_BLUE,    COLOR_BACKGROUND);
+	init_pair(3, COLOR_RED,     COLOR_BACKGROUND);
+	init_pair(4, COLOR_GREEN,   COLOR_BACKGROUND);
+	init_pair(5, COLOR_YELLOW,  COLOR_BACKGROUND);
+	init_pair(6, COLOR_CYAN,    COLOR_BACKGROUND);
+	init_pair(7, COLOR_MAGENTA, COLOR_BACKGROUND);
 
 	screen_SetSize();
 	screen_Init();
